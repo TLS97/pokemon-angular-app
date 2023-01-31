@@ -12,7 +12,6 @@ const { apiTrainers, apiKey } = environment;
 export class LoginService {
   constructor(private readonly http: HttpClient) {}
 
-  // Login
   public login(username: string): Observable<Trainer> {
     return this.checkUsername(username).pipe(
       switchMap((trainer: Trainer | undefined) => {
@@ -23,13 +22,13 @@ export class LoginService {
       })
     );
   }
-  // Check if user exists
+
   private checkUsername(username: string): Observable<Trainer | undefined> {
     return this.http
       .get<Trainer[]>(`${apiTrainers}?username=${username}`)
       .pipe(map((response: Trainer[]) => response.pop()));
   }
-  // If not user - create a user
+
   private createUser(username: string): Observable<Trainer> {
     const trainer = {
       username,
@@ -45,7 +44,10 @@ export class LoginService {
       headers,
     });
   }
-  // If user || created user - store user
 
   // Logout
+  public logout(): void {
+    // Delete trainer from sessionStorage
+    // Redirect to login page
+  }
 }
