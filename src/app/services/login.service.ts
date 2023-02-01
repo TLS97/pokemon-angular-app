@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map, switchMap, of } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { Trainer } from '../models/trainer.model';
+import { StorageUtil } from '../utils/storage.util';
 
 const { apiTrainers, apiKey } = environment;
 
@@ -46,8 +47,7 @@ export class LoginService {
   }
 
   // Logout
-  public logout(): void {
-    // Delete trainer from sessionStorage
-    // Redirect to login page
+  public logout(storageKey: string): void {
+    StorageUtil.storageDelete(storageKey)
   }
 }
