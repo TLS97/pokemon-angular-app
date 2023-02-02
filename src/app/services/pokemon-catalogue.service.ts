@@ -51,6 +51,10 @@ export class PokemonCatalogueService {
 
   public getPokemons(): void {
 
+    if (this._pokemons.length > 0 || this.loading) {
+      return
+    }
+
     this._loading = true;
     this.http.get<PokemonResponse>(apiPokemon)
     .pipe(
@@ -70,4 +74,7 @@ export class PokemonCatalogueService {
     })
   }
 
+  public pokemonById(id: string) : Pokemon | undefined {
+    return this._pokemons.find((pokemon: Pokemon) => pokemon.id === id);
+  }
 }
