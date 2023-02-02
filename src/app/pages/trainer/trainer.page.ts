@@ -13,7 +13,7 @@ export class TrainerPage {
     return this.trainerService.trainer;
   }
 
-  get pokemon(): Pokemon[] {
+  get pokemons(): Pokemon[] {
     if (this.trainerService.trainer) {
       return this.trainerService.trainer.pokemon;
     }

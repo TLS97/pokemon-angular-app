@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonCatalogueService } from './services/pokemon-catalogue.service';
 import { TrainerService } from './services/trainer.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { TrainerService } from './services/trainer.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private readonly trainerService: TrainerService) {}
+  constructor(
+    private readonly trainerService: TrainerService,
+    private readonly pokemonCatalogueService: PokemonCatalogueService
+  ) {}
 
   ngOnInit(): void {
     if (this.trainerService.trainer) {
-      // this.pokemonService.findAllPokemon();
+      this.pokemonCatalogueService.getPokemons();
     }
   }
 }
