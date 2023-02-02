@@ -1,1 +1,19 @@
-<p>collected-button works!</p>
+<aside class="absolute top-4 right-4">
+    <button (click)="onCollectedClick()" class="border border-slate-300 rounded flex justify-center items-center p-2">
+
+        <ng-container *ngIf="!loading; else spinner">
+            <ng-container *ngIf="isCollected; then collected else notCollected"></ng-container>
+            <ng-template #collected>
+                <img src="../../../assets/img/pokeball.png" class="block w-4" />
+            </ng-template>
+            <ng-template #notCollected>
+                <img src="../../../assets/img/pokeball_border.png" class="block w-4" />
+            </ng-template>
+        </ng-container>
+
+        <ng-template #spinner>
+            <img src="../../../assets/img/loading.png" class="block w-4 animate-spin" />
+        </ng-template>
+
+    </button>
+</aside>
