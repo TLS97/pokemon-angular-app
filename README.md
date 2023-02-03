@@ -1,27 +1,28 @@
-# NgPokemon
+# Pokèmon App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+This is a frontend application developed using Angular.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The application has three pages: Login page, Trainer page and Catalogue page. The Login page allows the user to login by providing a username. After being logged in the user is redirected to the Catalogue page, where a list of Pokèmon is displayed. The user can collect Pokèmon by clicking on the Pokèball-button. On the Trainer page, the user's collected Pokèmon are displayed. A Pokèmon can also be removed from the collection by clicking the Pokèball-button on either the Trainer or Catalogue page.
 
-## Code scaffolding
+## Install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run the project, first install the dependencies:
 
-## Build
+```
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+Start the application by running the following command:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng serve
+```
 
-## Running end-to-end tests
+## Contributors
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Ha Hoang](https://gitlab.com/hhoan)
+[Tine Storvoll](https://gitlab.com/TLS97)
