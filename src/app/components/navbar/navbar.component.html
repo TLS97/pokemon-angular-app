@@ -1,17 +1,17 @@
-<nav class="bg-blue-500 text-white flex justify-between items-center p-4 sticky top-0 w-full z-50">
+<nav class="bg-blue text-white flex justify-between items-center p-4 sticky top-0 w-full z-50 shadow-md">
     <div class="flex items-center">
         <img src="../../assets/img/icon.png" class="block w-10" />
         <span class="font-bold px-4 cursor-default">Pokémon Trainer</span>
     </div>
     <ng-container *ngIf="trainer !== undefined">
         <ul class="flex">
-            <li class="px-4">
+            <li class="px-4  hover:scale-110">
                 <a routerLink="/catalogue">Pokémon Catalogue</a>
             </li>
-            <li class="px-4">
+            <li class="px-4 hover:scale-110">
                 <a routerLink="/trainer">Trainer Page</a>
             </li>
-            <li class="px-4">
+            <li class="px-4 hover:scale-110">
                 <button (click)="handleLogoutClick()">Logout</button>
             </li>
         </ul>
