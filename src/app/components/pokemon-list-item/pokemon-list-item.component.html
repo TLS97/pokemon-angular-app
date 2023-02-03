@@ -1,4 +1,4 @@
-<li *ngIf="pokemon" class="mb-4 shadow bg-white rounded relative">
+<li *ngIf="pokemon" class="w-44 p-2 mx-2 mb-4 shadow bg-white rounded relative">
     <app-collected-button [pokemonId]="pokemon.id"></app-collected-button>
     <span>{{ pokemon.name.toUpperCase() }}</span>
     <img [src]="pokemon.image" [alt]="pokemon.name"/>

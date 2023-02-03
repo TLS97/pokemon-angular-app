@@ -1,5 +1,5 @@
 <aside class="absolute top-4 right-4">
-    <button (click)="onCollectedClick()" class="border border-slate-300 rounded flex justify-center items-center p-2">
+    <button (click)="onCollectedClick()" class="border border-lightgrey rounded flex justify-center items-center p-2">
 
         <ng-container *ngIf="!loading; else spinner">
             <ng-container *ngIf="isCollected; then collected else notCollected"></ng-container>
